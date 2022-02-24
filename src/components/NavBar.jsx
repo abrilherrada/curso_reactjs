@@ -1,5 +1,6 @@
-import logo from '../../logo.png';
-import './NavBar.css';
+import logo from '../images/logo.png';
+import '../styles/NavBar.css';
+import CartWidget from './CartWidget'
 
 function NavBar() {
     return (
@@ -12,7 +13,7 @@ function NavBar() {
                     <li><a className="NavLink" href="#">Adultos</a></li>
                 </ul>
             </div>
-            <button className="CartButton">Carrito</button>
+            <CartWidget/>
         </nav>
     );
 }

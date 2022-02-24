@@ -1,9 +1,13 @@
-import './App.css';
-import NavBar from './components/NavBar/NavBar';
+import './styles/App.css';
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
-    <NavBar/>
+    <>
+      <NavBar/>
+      <ItemListContainer greeting='Bienvenido a librería El Túnel'/>
+    </>
   );
 }
 
