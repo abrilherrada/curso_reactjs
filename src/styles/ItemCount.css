@@ -1,0 +1,30 @@
+.quantityContainer {
+    display: flex;
+    margin: auto;
+    border: 2px solid #7ACBCD;
+    border-radius: 0.25rem;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0;
+}
+
+.quantityInput {
+    border-style: none;
+    text-align: center;
+}
+
+.quantityButton {
+    border-style: none;
+    color: #7ACBCD;
+    background-color: white;
+    align-self: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.quantityButton:hover {
+    color: #339192;
+}
