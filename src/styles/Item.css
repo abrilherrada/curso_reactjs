@@ -1,6 +1,10 @@
+.productContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .productCard {
     width: 20%;
-    margin: auto;
     display: flex;
     flex-direction: column;
     word-wrap: break-word;
@@ -13,6 +17,14 @@
 .productTitle {
     text-align: center;
     color: #7ACBCD;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+.productAuthor {
+    text-align: center;
+    margin-block-start: 0.5em;
+    margin-block-end: 1em;
 }
 
 .productImg {

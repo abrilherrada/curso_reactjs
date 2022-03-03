@@ -1,11 +1,11 @@
 import '../styles/ItemListContainer.css';
-import ItemCard from './ItemCard';
+import ItemList from './ItemList';
 
 function ItemListContainer({greeting}) {
     return (
         <>
             <h2 className="ContainerTitle">{greeting}</h2>
-            <ItemCard stock={5} initial={1}/>
+            <ItemList/>
         </>
     )
 }
