@@ -1,23 +1,26 @@
 import {useState, useEffect} from 'react';
+import {useParams} from 'react-router-dom';
 import ItemDetail from "./ItemDetail";
 import getItem from "../getItem";
 import '../styles/Item.css';
 
 function ItemDetailContainer() {
-    const [products, setProducts] = useState([]);
+    const [product, setProduct] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const {id} = useParams();
 
     useEffect(() => {
         getItem
         .then((response) => {
-            setProducts(response)
+            setProduct(response.find(prod => prod.id === parseInt(id)))
         })
         .catch(error => console.log(error))
-    }, [])
-    console.log(products)
+        .finally(() => setLoading(false))
+    }, [id])
 
     return (
         <div className="productContainer">
-            <ItemDetail key={products.id} title={products.title} author={products.author} price={products.price} description={products.description} stock={products.stock} picture={products.pictureURL} initial={1}/>
+            {loading ? <div className='loadingContainer'><img className="loading" src='/images/loading.gif' alt=''></img></div> : <ItemDetail product={product}/>}
         </div>
     )
 }

@@ -1,35 +1,24 @@
-import {useState} from 'react';
 import ItemCount from "./ItemCount";
 import '../styles/Item.css';
 
-function ItemDetail({key, title, author, price, description, stock, picture, initial}) {
-    const [count, setCount] = useState(1);
-
-    const increaseCount = () => {
-        if (count >= initial && count < stock) {
-            setCount(count + 1);
-        }
-    }
-
-    const decreaseCount = () => {
-        if (count > initial && count <= stock) {
-            setCount(count - 1);
-        }
-    }
-
-    const onAdd = () => {
-        console.log(`Agregaste ${count} unidades del libro ${title} al carrito.`)
-    }
+function ItemDetail({product}) {
     
+    const onAdd = (quantity) => {
+        console.log(`Agregaste ${quantity} unidades del libro ${product.title} al carrito.`)
+    }
+
     return (
-            <div className="productCard">
-                <img src={picture} alt={title} />
-                <h3 className="productTitle">{title}</h3>
-                <h4 className="productAuthor">{author}</h4>
-                <p className="productPrice">${price}</p>
-                <p className="productDescription">{description}</p>
-                <ItemCount count={count} increaseCount={increaseCount} decreaseCount={decreaseCount}/>
-                <button onClick={onAdd} className="productAdd">Agregar</button>
+            <div className="productDetailCard" key={product.id}>
+                <div className="productDetailContainer">
+                    <img className="productDetailImg" src={product.pictureURL} alt={product.title} />
+                    <div className='productDetailInfo'>
+                        <h3 className="productTitle">{product.title.toUpperCase()}</h3>
+                        <h4 className="productAuthor">{product.author}</h4>
+                        <p>${product.price}</p>
+                        <p className="productDetailDescription">{product.description}</p>
+                    </div>
+                </div>
+                <ItemCount initial={1} stock={product.stock} onAdd={onAdd}/>
             </div>
     )
 }

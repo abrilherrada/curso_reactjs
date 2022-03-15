@@ -1,19 +1,21 @@
-import logo from '../images/logo.png';
+import { NavLink } from 'react-router-dom';
+import logo from '../assets/logo.png';
 import '../styles/NavBar.css';
-import CartWidget from './CartWidget'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faCartShopping} from '@fortawesome/free-solid-svg-icons';
 
 function NavBar() {
     return (
         <nav className='NavBar'>
-            <a href="/"><img src={logo} alt="logo"/></a>
+            <NavLink to='/'><img src={logo} alt="logo"/></NavLink>
             <div className='CategoriesContainer'>
-                <ul className='Categories'>
-                    <li><a className="NavLink" href="/">Niños</a></li>
-                    <li><a className="NavLink" href="/">Adolescentes</a></li>
-                    <li><a className="NavLink" href="/">Adultos</a></li>
-                </ul>
+                <NavLink to='category/infantil' className="NavLink">Niños</NavLink>
+                <NavLink to='category/juvenil' className="NavLink">Adolescentes</NavLink>
+                <NavLink to='category/adultos' className="NavLink">Adultos</NavLink>
             </div>
-            <CartWidget/>
+            <NavLink to='/cart' className="CartButton">
+                <FontAwesomeIcon icon={faCartShopping}/>
+            </NavLink>
         </nav>
     );
 }

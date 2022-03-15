@@ -1,19 +1,19 @@
-.quantityContainer {
+.counterContainer{
     display: flex;
-    margin: auto;
-    border: 2px solid #7ACBCD;
-    border-radius: 0.25rem;
+    justify-content: center;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none; 
-    margin: 0;
+.quantityContainer {
+    display: flex;
+    margin: 1rem;
+    border: 2px solid #7ACBCD;
+    border-radius: 0.25rem;
 }
 
 .quantityInput {
     border-style: none;
     text-align: center;
+    padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 .quantityButton {
@@ -27,4 +27,17 @@ input[type=number]::-webkit-outer-spin-button {
 
 .quantityButton:hover {
     color: #339192;
+}
+
+.productAdd:hover {
+    color: #fff;
+    background-color: #7a7a7a;
+    border-color: #7a7a7a;
+}
+
+.productAdd:active {
+    color: #fff;
+    background-color: #7a7a7a;
+    border-color: #7a7a7a9c;
+    box-shadow: 0 0 0 0.25rem #7a7a7a9c;
 }

@@ -7,9 +7,11 @@
     font-size: 18px;
     font-weight: 700;
     border-radius: 0.25rem;
-    height: 3.2rem;
+    height: 2rem;
     align-self: center;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    display: flex;
+    align-items: center;
 }
 
 .CartButton:hover {
