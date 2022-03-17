@@ -17,7 +17,7 @@ function ItemCount({initial, stock, onAdd}) {
     }
 
     const add = () => {
-        onAdd(count)
+        onAdd(count);
     }
 
     return (

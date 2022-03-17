@@ -78,7 +78,7 @@
     margin: 0;
 }
 
-.productAdd, .productMore {
+.productAdd, .productMore, .productCart {
     color: #363636;
     background-color: #7ACBCD;
     border-color: #7ACBCD;
@@ -88,6 +88,24 @@
     align-self: center;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     margin: 1rem;
+}
+
+.productAdd:hover, .productMore:hover, .productCart:hover {
+    color: #fff;
+    background-color: #7a7a7a;
+    border-color: #7a7a7a;
+}
+
+.productAdd:active, .productMore:active, .productCart:active {
+    color: #fff;
+    background-color: #7a7a7a;
+    border-color: #7a7a7a9c;
+    box-shadow: 0 0 0 0.25rem #7a7a7a9c;
+}
+
+.productCart {
+    background-color: #FBBA72;
+    border-color: #FBBA72;
 }
 
 .productMore {
