@@ -3,11 +3,13 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import CartWidget from './components/CartWidget';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import CartContextProvider from './context/CartContext';
 import './styles/App.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <CartContextProvider>
+      <BrowserRouter>
         <NavBar/>
         <Routes>
           <Route path='/' element={<ItemListContainer greeting='¡Te damos la bienvenida!'/>}/>
@@ -16,7 +18,8 @@ function App() {
           <Route path='/cart' element={<CartWidget/>}/>
           <Route path='/*' element={<Navigate to='/' replace/>}/>
         </Routes>
-    </BrowserRouter>
+      </BrowserRouter>
+    </CartContextProvider>
   );
 }
 

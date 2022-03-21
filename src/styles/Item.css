@@ -88,6 +88,8 @@
     align-self: center;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     margin: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 .productAdd:hover, .productMore:hover, .productCart:hover {
