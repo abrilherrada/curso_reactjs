@@ -34,9 +34,15 @@ function CartContextProvider({children}) {
         cartList.forEach(item => total += item.price * item.quantity)
         return total
     }
+
+    const totalQuantity = () => {
+        let totalQuantity = 0;
+        cartList.forEach(item => totalQuantity += item.quantity)
+        return totalQuantity
+    }
     
     return (
-        <CartContext.Provider value={{cartList, addItem, clear, total, removeItem}}>
+        <CartContext.Provider value={{cartList, addItem, clear, removeItem, total, totalQuantity}}>
             {children}
         </CartContext.Provider>
         )
