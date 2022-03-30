@@ -1,8 +1,8 @@
 import {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import ItemDetail from "./ItemDetail";
-import getItem from "../getItem";
 import '../styles/Item.css';
+import { doc, getDoc, getFirestore } from "firebase/firestore"
 
 function ItemDetailContainer() {
     const [product, setProduct] = useState([]);
@@ -10,9 +10,11 @@ function ItemDetailContainer() {
     const {id} = useParams();
 
     useEffect(() => {
-        getItem
-        .then((response) => {
-            setProduct(response.find(prod => prod.id === parseInt(id)))
+        const db = getFirestore()
+        const queryFilter = doc(db, 'products', id)
+        getDoc(queryFilter)
+        .then(response => {
+            setProduct({id: response.id, ...response.data()})
         })
         .catch(error => console.log(error))
         .finally(() => setLoading(false))
