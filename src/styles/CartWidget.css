@@ -137,3 +137,16 @@ td {
     background-color: #fff;
     border-radius: 25%;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formInput {
+    margin: 0.5rem;
+    border: 2px solid #7ACBCD;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
