@@ -4,7 +4,7 @@ import ItemList from './ItemList';
 import '../styles/ItemListContainer.css';
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore"
 
-function ItemListContainer({greeting}) {
+function ItemListContainer() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const {id} = useParams();
@@ -34,7 +34,7 @@ function ItemListContainer({greeting}) {
 
     return (
         <>
-            <h2 className="ContainerTitle">{greeting}</h2>
+            <h2 className="ContainerTitle">¡Te damos la bienvenida!</h2>
             {loading ? <div className='loadingContainer'><img className="loading" src='/images/loading.gif' alt=''></img></div> : <ItemList products={products}/>}
         </>
     )

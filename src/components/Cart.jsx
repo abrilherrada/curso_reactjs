@@ -4,10 +4,12 @@ import { useState } from "react";
 import { useCartContext } from '../context/CartContext';
 import '../styles/CartWidget.css';
 import swal from 'sweetalert';
+import { useUserContext } from "../context/UserContext";
 
 function Cart() {
     const {cartList, clear, total, removeItem} = useCartContext()
-    const [formData, setFormData] = useState({email: '', name: '', phone: ''})
+    const {user} = useUserContext();
+    const [formData, setFormData] = useState({uid: user.uid, email: user.email, name: user.displayName, phone: '', address: ''})
 
     const db = getFirestore()
 
@@ -85,12 +87,15 @@ function Cart() {
                     </tbody>
                 </table>
                 <button onClick={clear} className="clearCart">Vaciar carrito</button>
+                <h2>Completá los siguientes datos necesarios para el envío</h2>
                 <form>
-                    <input className='formInput' type='text' name='name' placeholder='Nombre y Apellido' value={formData.name} onChange={saveFormData}/>
+                    <input className='formInput' type='text' name='address' placeholder='Dirección de envío' value={formData.address} onChange={saveFormData}/>
                     <input className='formInput' type='text' name='phone' placeholder='Número de teléfono' value={formData.phone} onChange={saveFormData}/>
-                    <input className='formInput' type='email' name='email' placeholder='Correo electrónico' value={formData.email} onChange={saveFormData}/>
                 </form>
-                <button onClick={createPurchaseOrder} className="clearCart">Terminar compra</button>
+                <button onClick={() => {
+                    createPurchaseOrder()
+                    clear()
+                }} className="clearCart">Terminar compra</button>
             </>
             }
         </div>

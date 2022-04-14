@@ -1,0 +1,103 @@
+.logInTitle {
+  margin-top: 1rem;
+}
+
+.logInContainer {
+  width: 40%;
+  margin: 1rem auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.tabContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.tabContainer .tabInput {
+  display: none;
+}
+
+.tabContainer .tabInput:checked + label {
+  background: #fff;
+  border-bottom: 2px solid #7ACBCD;
+}
+
+.tabContainer label {
+  font-size: 16px;
+  height: 36px;
+  line-height: 36px;
+  width: 50%;
+  text-align: center;
+  background: #fff;
+  color: black;
+  -webkit-transition: 0.25s background ease;
+  transition: 0.25s background ease;
+  cursor: pointer;
+}
+
+.tabContainer label::after {
+  border-bottom: 2px solid #7acccd8f;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+.tabContainer label:hover {
+  border-bottom: 2px solid #7acccd8f;
+}
+
+.logInInput, .registerInput {
+  margin: 0.5rem auto;
+  display: block;
+  border: 2px solid #7ACBCD;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.completeLogIn, .completeRegister {
+  color: #363636;
+  background-color: #7ACBCD;
+  border-color: #7ACBCD;
+  border: 1px solid transparent;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.25rem;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.completeLogIn:hover, .completeRegister:hover {
+  color: #fff;
+  background-color: #7a7a7a;
+  border-color: #7a7a7a;
+}
+
+.completeLogIn:active, .completeRegister:active {
+  color: #fff;
+  background-color: #7a7a7a;
+  border-color: #7a7a7a9c;
+  -webkit-box-shadow: 0 0 0 0.25rem #7a7a7a9c;
+          box-shadow: 0 0 0 0.25rem #7a7a7a9c;
+}
+
+.hidden {
+  display: none;
+}
+
+.wrongPassword {
+  color: #e63947;
+  font-size: 0.8rem;
+  font-weight: 600;
+}

@@ -1,20 +1,46 @@
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
-import '../styles/NavBar.css';
+import '../css/NavBar.css';
 import CartWidget from './CartWidget';
+import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faUser} from '@fortawesome/free-solid-svg-icons';
 
 function NavBar() {
+    const [isActive, setActive] = useState('false')
+    const toggleClass = () => {
+        setActive(!isActive)
+    }
+
     return (
-        <nav className='NavBar'>
-            <NavLink to='/'><img src={logo} alt="logo"/></NavLink>
-            <div className='CategoriesContainer'>
-                <NavLink to='category/infantil' className="NavLink">Niños</NavLink>
-                <NavLink to='category/juvenil' className="NavLink">Adolescentes</NavLink>
-                <NavLink to='category/adultos' className="NavLink">Adultos</NavLink>
+        <nav className="navbar">
+            <div className="navbrand">
+                <NavLink to='/'><img src={logo} alt="logo"/></NavLink>
+                <div className={isActive ? 'burger active' : 'burger null'} onClick={toggleClass}>
+                    <span className="burgerOpen">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16">
+                            <g fill="#fff" fillRule="evenodd">
+                                <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
+                            </g>
+                        </svg>
+                    </span>
+                    <span className="burgerClose">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                            <path fill="#fff" fillRule="evenodd" d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z" />
+                        </svg>
+                    </span>
+                </div>
             </div>
+            <div className={isActive ? 'menu active' : 'menu null'} onClick={toggleClass}>
+                <NavLink to='category/infantil' className="menuLink">Niños</NavLink>
+                <NavLink to='category/juvenil' className="menuLink">Adolescentes</NavLink>
+                <NavLink to='category/adultos' className="menuLink">Adultos</NavLink>
+            </div>
+            <NavLink to='/profile' className="LogInButton"><FontAwesomeIcon icon={faUser}/></NavLink>            
             <CartWidget/>
         </nav>
     );
 }
+
 
 export default NavBar;

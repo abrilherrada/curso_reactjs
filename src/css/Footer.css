@@ -1,0 +1,30 @@
+.footer {
+  background-color: #363636;
+  height: 8rem;
+  width: 100%;
+}
+
+.footerContainer {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footerIcon {
+  color: white;
+  font-size: 2rem;
+  margin: 2rem;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.footerIcon:hover {
+  color: #7ACBCD;
+}
