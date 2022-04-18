@@ -17,7 +17,7 @@ function NavBar() {
         <nav className="navbar">
             <div className="navbrand">
                 <NavLink to="/">
-                    <img src={logo} alt="logo" />
+                    <img className="logo" src={logo} alt="logo" />
                 </NavLink>
                 <div
                     className={isActive ? 'burger active' : 'burger null'}
@@ -63,10 +63,12 @@ function NavBar() {
                     Adultos
                 </NavLink>
             </div>
-            <NavLink to="/profile" className="LogInButton">
-                <FontAwesomeIcon icon={faUser} />
-            </NavLink>
-            <CartWidget />
+            <div className="navButtonsContainer">
+                <NavLink to="/profile" className="LogInButton">
+                    <FontAwesomeIcon icon={faUser} />
+                </NavLink>
+                <CartWidget />
+            </div>
         </nav>
     );
 }

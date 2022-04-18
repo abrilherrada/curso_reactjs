@@ -18,6 +18,12 @@
   padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .finishPurchase {
   color: #363636;
   background-color: #7ACBCD;

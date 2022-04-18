@@ -1,8 +1,22 @@
+import swal from 'sweetalert';
 import { useCartContext } from '../context/CartContext';
 import '../styles/css/PurchaseForm.css';
 
 function PurchaseForm({ createPurchaseOrder, formData, saveFormData }) {
-    const { verifyData } = useCartContext();
+    const { clear } = useCartContext();
+
+    const verifyData = () => {
+        if (formData.address.length !== 0 && formData.phone.length !== 0) {
+            createPurchaseOrder();
+            clear();
+        } else {
+            swal(
+                'Faltan datos',
+                'Para poder procesar tu compra, necesitamos que completes los campos de dirección y de teléfono.',
+                'error'
+            );
+        }
+    };
 
     return (
         <>
@@ -18,23 +32,14 @@ function PurchaseForm({ createPurchaseOrder, formData, saveFormData }) {
                 />
                 <input
                     className="formInput"
-                    type="text"
+                    type="number"
                     name="phone"
                     placeholder="Número de teléfono"
                     value={formData.phone}
                     onChange={saveFormData}
                 />
             </form>
-            <button
-                onClick={() =>
-                    verifyData(
-                        formData.address.length,
-                        formData.phone.length,
-                        createPurchaseOrder
-                    )
-                }
-                className="finishPurchase"
-            >
+            <button onClick={verifyData} className="finishPurchase">
                 Terminar compra
             </button>
         </>

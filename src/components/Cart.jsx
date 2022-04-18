@@ -76,8 +76,7 @@ function Cart() {
                     'success'
                 );
             })
-            .catch((error) => console.log(error))
-            .finally((response) => console.log(response));
+            .catch((error) => console.log(error));
 
         updateStock();
     };

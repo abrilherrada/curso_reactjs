@@ -1,8 +1,28 @@
+import swal from 'sweetalert';
 import { useCartContext } from '../context/CartContext';
 import '../styles/css/PurchaseSummary.css';
 
 function PurchaseSummary() {
-    const { cartList, total, removeItem, confirmClearClart } = useCartContext();
+    const { cartList, total, removeItem, clear } = useCartContext();
+
+    const confirmClearClart = () => {
+        swal({
+            title: '¿Confirmás que querés vaciar el carrito?',
+            text: 'Si solo querés sacar un producto, podés hacer clic en la X que se encuentra a su derecha. De esta forma, los otros productos se mantendrán.',
+            icon: 'warning',
+            buttons: ['Cancelar', 'Vaciar'],
+            dangerMode: true,
+        }).then((willDelete) => {
+            if (willDelete) {
+                swal('¡Listo! Sacamos todos los productos del carrito.', {
+                    icon: 'success',
+                });
+                clear();
+            } else {
+                swal('Todos los productos siguen en el carrito.');
+            }
+        });
+    };
 
     return (
         <>

@@ -25,6 +25,9 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+		.logo {
+			max-width: 300px;
+		}
 		.burger {
 			display: flex;
 			flex-direction: row;
@@ -69,11 +72,13 @@
 			&:hover {
 				color: #7ACBCD;
 			}
+			&.active {
+				color: #7ACBCD;
+			}
 		}
 		&.active {
 			width: 100%;
 			height: auto;
-			margin: 1rem 0rem;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -85,6 +90,7 @@
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
+			flex-wrap: wrap;
 			height: auto;
 			&Link {
 				padding: 0;
@@ -92,6 +98,11 @@
 			}
 		}
 	}
+}
+
+.navButtonsContainer {
+	display: flex;
+	justify-content: center;
 }
 
 .LogInButton {
@@ -103,6 +114,7 @@
     font-size: 18px;
     font-weight: 700;
     border-radius: 0.25rem;
+	width: 3rem;
     height: 2rem;
     align-self: center;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;

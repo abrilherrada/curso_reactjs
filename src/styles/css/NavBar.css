@@ -40,6 +40,10 @@
           align-items: center;
 }
 
+.navbar .navbrand .logo {
+  max-width: 300px;
+}
+
 .navbar .navbrand .burger {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -104,10 +108,13 @@
   color: #7ACBCD;
 }
 
+.navbar .menuLink.active {
+  color: #7ACBCD;
+}
+
 .navbar .menu.active {
   width: 100%;
   height: auto;
-  margin: 1rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,12 +140,23 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     height: auto;
   }
   .navbar .menuLink {
     padding: 0;
     margin: 0.5rem 1rem;
   }
+}
+
+.navButtonsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .LogInButton {
@@ -150,6 +168,7 @@
   font-size: 18px;
   font-weight: 700;
   border-radius: 0.25rem;
+  width: 3rem;
   height: 2rem;
   -ms-flex-item-align: center;
       align-self: center;

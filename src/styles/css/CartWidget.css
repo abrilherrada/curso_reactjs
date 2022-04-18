@@ -7,6 +7,8 @@
   font-size: 18px;
   font-weight: 700;
   border-radius: 0.25rem;
+  min-width: 3rem;
+  max-width: 5rem;
   height: 2rem;
   -ms-flex-item-align: center;
       align-self: center;

@@ -61,38 +61,6 @@ function CartContextProvider({ children }) {
         return totalQuantity;
     };
 
-    const verifyData = (addressLength, phoneLength, createOrder) => {
-        if (addressLength !== 0 && phoneLength !== 0) {
-            createOrder();
-            clear();
-        } else {
-            swal(
-                'Faltan datos',
-                'Para poder procesar tu compra, necesitamos que completes los campos de dirección y de teléfono.',
-                'error'
-            );
-        }
-    };
-
-    const confirmClearClart = () => {
-        swal({
-            title: '¿Confirmás que querés vaciar el carrito?',
-            text: 'Si solo querés sacar un producto, podés hacer clic en la X que se encuentra a su derecha. De esta forma, los otros productos se mantendrán.',
-            icon: 'warning',
-            buttons: ['Cancelar', 'Vaciar'],
-            dangerMode: true,
-        }).then((willDelete) => {
-            if (willDelete) {
-                swal('¡Listo! Sacamos todos los productos del carrito.', {
-                    icon: 'success',
-                });
-                clear();
-            } else {
-                swal('Todos los productos siguen en el carrito.');
-            }
-        });
-    };
-
     return (
         <CartContext.Provider
             value={{
@@ -102,8 +70,6 @@ function CartContextProvider({ children }) {
                 removeItem,
                 total,
                 totalQuantity,
-                verifyData,
-                confirmClearClart,
             }}
         >
             {children}
