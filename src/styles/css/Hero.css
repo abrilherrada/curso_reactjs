@@ -42,7 +42,7 @@
 
 .hero::before {
   content: "";
-  background-image: url("../assets/hero.jpg");
+  background-image: url("../../assets/hero.jpg");
   background-size: cover;
   position: absolute;
   top: 0px;

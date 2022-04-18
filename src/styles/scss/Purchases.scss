@@ -1,0 +1,16 @@
+.purchases {
+    &Container {
+        margin: 1rem 2rem;
+    }
+    &TD {
+        padding: 0.5rem;
+        width: 70%;
+        text-align: left;
+    }
+    &Title {
+        width: 30%;
+    }
+    &Number {
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,11 @@
+.containerTitle {
+  text-align: center;
+  color: #7ACBCD;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.noCategory {
+  text-align: center;
+  padding: 1rem;
+}

@@ -1,34 +1,17 @@
-.userTitle {
-    padding: 1rem;
+.cartForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.noPurchases {
-    text-align: center;
-    padding-bottom: 1rem;
+.formInput {
+    margin: 0.5rem;
+    border: 2px solid #7ACBCD;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
-.purchases {
-    padding: 1rem;
-    color: #7ACBCD;
-    text-align: center;
-    &Container {
-        margin: 1rem 2rem;
-        width: 30%;
-    }
-    &TD {
-        padding: 0.5rem;
-        width: 50%;
-        text-align: left;
-    }
-    &Title {
-        width: 50%;
-    }
-    &Number {
-        font-weight: 600;
-    }
-}
-
-.logOutButton {
+.finishPurchase {
     color: #363636;
     background-color: #7ACBCD;
     border-color: #7ACBCD;

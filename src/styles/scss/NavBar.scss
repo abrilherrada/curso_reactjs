@@ -25,7 +25,6 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-
 		.burger {
 			display: flex;
 			flex-direction: row;
@@ -36,11 +35,9 @@
 			outline: none;
 			background: none;
 			transition: all 0.35s ease;
-
 			&Close {
 				display: none;
 			}
-
 			&.active {
 				.burgerOpen {
 					display: none;
@@ -62,7 +59,6 @@
 		height: 0;
 		overflow: hidden;
 		transition: all 0.5s ease;
-
 		&Link {
             margin: 0.5rem 1rem;
 			font-weight: 700;
@@ -70,12 +66,10 @@
 			text-transform: uppercase;
 			text-rendering: optimizeLegibility;
 			transition: all 0.35s ease;
-
 			&:hover {
 				color: #7ACBCD;
 			}
 		}
-
 		&.active {
 			width: 100%;
 			height: auto;
@@ -92,7 +86,6 @@
 			justify-content: center;
 			align-items: center;
 			height: auto;
-            
 			&Link {
 				padding: 0;
 				margin: 0.5rem 1rem;

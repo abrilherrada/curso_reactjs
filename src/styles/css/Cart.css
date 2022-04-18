@@ -1,0 +1,47 @@
+h2 {
+  text-align: center;
+  color: #7ACBCD;
+}
+
+.landingLink {
+  text-decoration: none;
+}
+
+.landingButton {
+  color: #363636;
+  background-color: #FBBA72;
+  border-color: #FBBA72;
+  border: 1px solid transparent;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.25rem;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.landingButton:hover {
+  color: #fff;
+  background-color: #7a7a7a;
+  border-color: #7a7a7a;
+}
+
+.landingButton:active {
+  color: #fff;
+  background-color: #7a7a7a;
+  border-color: #7a7a7a9c;
+  -webkit-box-shadow: 0 0 0 0.25rem #7a7a7a9c;
+          box-shadow: 0 0 0 0.25rem #7a7a7a9c;
+}
+
+.currentUser {
+  text-align: center;
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+}
