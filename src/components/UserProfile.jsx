@@ -36,7 +36,7 @@ function UserProfile() {
                 .catch((error) => console.log(error))
                 .finally(() => setLoading(false));
         }
-    }, [user]);
+    }, [user, setOrders]);
 
     return (
         <div className={user ? 'null' : 'hidden'}>
