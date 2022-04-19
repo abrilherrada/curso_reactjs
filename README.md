@@ -26,6 +26,8 @@ Este proyecto tiene los siguientes objetivos:
 -   Detalle de cada producto, al cual se puede acceder desde el botón que se encuentra en la tarjeta de cada producto. El detalle incluye, además de la imagen, el título y el autor, una descripción del libro, el precio y la opción para agregar el producto al carrito con la cantidad deseada.
 -   Página de inicio de sesión (si el usuario ya está registrado) o de registro.
 -   Perfil del usuario, en el que cada usuario puede ver sus compras realizadas y cerrar la sesión (que es persistente de forma local).
+-   Uso de contextos para gestionar la lógica global y separar responsabilidades.
+-   Estilos creados con SCSS. Por una cuestión de practicidad y funcionamiento del compilador de SCSS que utilicé, opté por almacenar todos los estilos en un directorio (/styles), divididos en diferentes archivos que reciben el nombre del componente al que modifican.
 
 ## Dependencias
 
