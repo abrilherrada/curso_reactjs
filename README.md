@@ -1,11 +1,40 @@
-#  TIENDA DE LIBROS
-El siguiente proyecto consiste en un e-commerce de libros. Los libros se dividen en categorías por edad y, en una próxima etapa, en subcategorías por género literario.
+# Librería El túnel
 
-## Objetivo
-Este proyecto tiene por objetivo brindar la posibilidad de comprar libros en línea de forma fácil e intuitiva.
+https://ephemeral-sunburst-830511.netlify.app/
+
+## Descripción
+
+El siguiente proyecto consiste en un e-commerce de libros. Los productos se dividen en categorías por edad (niños, adolescentes y adultos).
+
+## Objetivos
+
+Este proyecto tiene los siguientes objetivos:
+
+-   Brindar a los usuarios la posibilidad de comprar libros en línea de forma sencilla e intuitiva.
+-   Permitir que los usuarios puedan encontrar lo que buscan con rapidez mediante la división de los productos en categorías.
+-   Ofrecer a los usuarios información sobre las compras que realizaron.
 
 ## Contenido
-La página principal muestra los libros disponibles. Se puede hacer clic en "Ver más" para acceder a información pormenorizada del libro (como el precio y la descripción) y, si lo decide, agregar el libro al carrito. Además, desde el menú de navegación, se puede filtrar los libros por categoría.
 
-## Dependencias adicionales
-Como dependencia adicional, incluí el componente de Font Awesome para utilizar el ícono de carrito en el menú de navegación y, en una próxima etapa, para utilizar íconos en otras partes de la aplicación.
+-   Navbar responsive que incluye lo siguiente:
+    -   Logo con enlace a la página de inicio.
+    -   Enlances a las categorías de productos.
+    -   Botón para ir a la página de inicio de sesión o al perfil del usuario si este ya inició sesión.
+    -   Botón para ir al carrito de compras. En el carrito de compras, se puede ver un desglose de los productos seleccionados, quitar los productos seleccionados y finalizar la compra. Para eso, se pide al usuario información adicional que se verifica antes de proceder.
+-   Página de inicio, donde se muestran todos los productos disponibles.
+-   Páginas de productos filtrados por categorías.
+-   Detalle de cada producto, al cual se puede acceder desde el botón que se encuentra en la tarjeta de cada producto. El detalle incluye, además de la imagen, el título y el autor, una descripción del libro, el precio y la opción para agregar el producto al carrito con la cantidad deseada.
+-   Página de inicio de sesión (si el usuario ya está registrado) o de registro.
+-   Perfil del usuario, en el que cada usuario puede ver sus compras realizadas y cerrar la sesión (que es persistente de forma local).
+
+## Dependencias
+
+La aplicación de El túnel utiliza varios proyectos de código abierto para lograr su funcionamiento:
+
+| Dependencia      | Enlace                       | Versión | Propósito                                                                              |
+| ---------------- | ---------------------------- | ------- | -------------------------------------------------------------------------------------- |
+| React js         | https://reactjs.org/         | ^17.0.2 | Creación de la interfaz de usuario                                                     |
+| React Router DOM | https://reactrouter.com/     | ^6.2.2  | Gestión de layout de navegación entre componentes                                      |
+| Firebase         | https://firebase.google.com/ | ^9.6.10 | Gestión de autenticación de usuarios y almacenamiento de productos y órdenes de compra |
+| Font Awesome     | https://fontawesome.com/     | ^1.3.0  | Uso de íconos                                                                          |
+| Sweet Alert      | https://sweetalert.js.org/   | ^2.1.2  | Uso de alertas predeterminadas para la interacción con el usuario                      |
